@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export const inter = Inter({
+    weight: ["400", "500", "600", "700"], // Add specific weights as needed
     subsets: ["latin"],
     variable: "--font-inter",
     display: "swap",
