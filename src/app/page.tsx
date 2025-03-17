@@ -88,7 +88,14 @@ const Home = () => {
                             height={200}
                             className="rounded-full border-2 border-gray-300"
                         />
-                        <div className="absolute right-5 bottom-5 size-6 rounded-full border-2 border-green-200 bg-green-400"></div>
+                        <div className="absolute right-5 bottom-5">
+                            <div className="relative flex items-center justify-center">
+                                {/* Ping effect */}
+                                <div className="absolute size-6 animate-[ping_2s_linear_infinite] rounded-full bg-green-400 opacity-75"></div>
+                                {/* Solid center */}
+                                <div className="relative size-6 rounded-full border-2 border-green-200 bg-green-400"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* ABOUT ME */}
