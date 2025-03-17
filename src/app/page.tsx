@@ -75,7 +75,8 @@ const Home = () => {
                 <div className="flex flex-row items-center justify-between">
                     <div className="flex flex-col">
                         <h1 className="text-4xl font-bold text-[#04061D]">
-                            Hi, I&apos;m Chris 👋
+                            Hi, I&apos;m{' '}
+                            <span className="shine-text">Chris</span> 👋
                         </h1>
                         <h2>Software Developer & Student @ UoA</h2>
                         <p className="">📍 Auckland, New Zealand</p>
