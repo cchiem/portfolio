@@ -33,13 +33,13 @@ const Home = () => {
 
             {/* BG COLORS */}
             {/* Purple Blur */}
-            <div className="absolute top-1/4 left-1/4 -z-10 size-90 rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-2xl filter"></div>
+            {/* <div className="absolute top-1/4 left-1/4 -z-10 size-90 rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
 
             {/* Pink Blur */}
-            <div className="absolute top-1/3 right-1/4 -z-10 size-90 rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-2xl filter"></div>
+            {/* <div className="absolute top-1/3 right-1/4 -z-10 size-90 rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
 
             {/* Yellow Blur */}
-            <div className="absolute bottom-1/4 left-1/2 -z-10 size-90 rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-2xl filter"></div>
+            {/* <div className="absolute bottom-1/4 left-1/2 -z-10 size-90 rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
 
             <header className="absolute top-10 flex min-w-lg items-center justify-around rounded-2xl bg-white p-2 font-[600] shadow-md">
                 <svg
@@ -51,7 +51,7 @@ const Home = () => {
                 >
                     <path d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 tracking-wide">
                     <div>Home</div>
                     <div>Projects</div>
                     <div>Contact</div>
@@ -59,7 +59,7 @@ const Home = () => {
                 <div className="group relative">
                     <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-pink-700 to-purple-700 opacity-50 blur transition duration-200 group-hover:opacity-100"></div>
                     <button className="relative rounded-xl bg-black px-2 py-1 font-bold text-white">
-                        Resume
+                        CV
                     </button>
                 </div>
             </header>
@@ -80,13 +80,16 @@ const Home = () => {
                         <h2>Software Developer & Student @ UoA</h2>
                         <p className="">📍 Auckland, New Zealand</p>
                     </div>
-                    <Image
-                        src="/assets/images/Profile.jpg"
-                        alt="Profile Picture"
-                        width={200}
-                        height={200}
-                        className="rounded-full border-2 border-gray-300"
-                    />
+                    <div className="relative">
+                        <Image
+                            src="/assets/images/Profile.jpeg"
+                            alt="Profile Picture"
+                            width={200}
+                            height={200}
+                            className="rounded-full border-2 border-gray-300"
+                        />
+                        <div className="absolute right-5 bottom-5 size-6 rounded-full border-2 border-green-200 bg-green-400"></div>
+                    </div>
                 </div>
                 {/* ABOUT ME */}
                 <div className="flex flex-col">
@@ -116,7 +119,7 @@ const Home = () => {
 
                 <div className="flex flex-col gap-2">
                     <h1 className="font-500 text-lg">Education</h1>
-                    <div className="flex flex-row gap-3">
+                    <div className="flex gap-3">
                         <Image
                             src="/assets/icons/UOA-icon.png"
                             alt="University of Auckland"
@@ -124,7 +127,16 @@ const Home = () => {
                             height={50}
                             className="rounded-full border-2 border-gray-300"
                         />
-                        <h1>University of Auckland</h1>
+                        <div className="flex w-full justify-between">
+                            <div>
+                                <h1>University of Auckland</h1>
+                                <p className="text-sm text-gray-500">
+                                    Bachelor&apos;s of Computer Science &
+                                    Information Technology Management
+                                </p>
+                            </div>
+                            <p className="text-gray-500">Jan 2023 - Current</p>
+                        </div>
                     </div>
                 </div>
 
