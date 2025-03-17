@@ -2,8 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 
 const Home = () => {
-    const gridWidth = 50
-    const gridColor = 'blue-200'
+    // const gridWidth = 50
+    // const gridColor = 'blue-200'
     return (
         <div className="flex h-dvh w-dvw flex-col items-center justify-center">
             <div className="relative max-w-3xl">
