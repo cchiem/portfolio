@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: 'Portfolio',
 }
 
-const inter = Gabarito({
+const gabarito = Gabarito({
     subsets: ['latin'],
     weight: ['400', '500', '600', '700'],
 })
@@ -19,7 +19,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} antialiased`}>{children}</body>
+            <body
+                className={`${gabarito.className} cursor-[url('/assets/cursor/arrowhead.svg'), auto] antialiased`}
+            >
+                {children}
+            </body>
         </html>
     )
 }
