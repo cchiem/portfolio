@@ -4,23 +4,27 @@ body {
 }
 
 @theme {
-    --animate-shine: shine 4s linear infinite;
+    --animate-shine: shine 4s linear forwards;
 }
 
 @keyframes shine {
     0% {
         background-position: -200% 0;
+        color: transparent;
+    }
+    80% {
+        background-position: 200% 0;
+        color: transparent;
     }
     100% {
         background-position: 200% 0;
+        color: black;
     }
 }
-
 .shine-text {
     background-image: linear-gradient(to right, #ec4899, #8b5cf6, #ec4899);
     background-size: 200% auto;
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     animation: var(--animate-shine);
 }
