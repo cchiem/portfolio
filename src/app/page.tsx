@@ -9,21 +9,23 @@ import Tardis from './components/Tardis'
 import Cursor from './components/Cursor'
 
 const Home = () => {
-    const buttonRef = useRef<HTMLDivElement | null>(null)
+    const buttonRefProfilePic = useRef<HTMLDivElement | null>(null)
+    const buttonRefBio = useRef<HTMLDivElement | null>(null)
 
     return (
         <div className="relative flex min-h-screen min-w-full items-center justify-center bg-[url('/assets/background/subtle-dots.png')] bg-[size:60px] bg-top bg-repeat">
             {/* Fix: Ensure buttonRef is assigned correctly */}
             <Tardis />
             <Header />
+            <Cursor buttonRef={buttonRefProfilePic} position="top-right" />
+            <Cursor buttonRef={buttonRefBio} position="bottom-left" />
 
             <div className="mt-30 flex max-w-2xl flex-col gap-4">
-                <div className="absolute bg-blue-300 p-4" ref={buttonRef}>
-                    HELLO
-                </div>
-                <Cursor buttonRef={buttonRef} />
                 {/* PROFILE SECTION */}
-                <Profile />
+                <Profile
+                    refProfilePic={buttonRefProfilePic}
+                    refBio={buttonRefBio}
+                />
                 {/* ABOUT ME */}
                 <Bio />
 

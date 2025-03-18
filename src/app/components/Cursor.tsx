@@ -4,38 +4,64 @@ import React, { useEffect, useState, RefObject } from 'react'
 
 interface CursorProps {
     buttonRef: RefObject<HTMLDivElement>
+    position: 'top-right' | 'bottom-left'
 }
 
-const Cursor: React.FC<CursorProps> = ({ buttonRef }) => {
-    const [cursorPosition, setCursorPosition] = useState({ x: -100, y: -10 })
+const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
+    const [cursorPosition, setCursorPosition] = useState({ x: -120, y: -10 })
+    const [opacity, setOpacity] = useState(1) // Control fade-out
+
+    const initialTransform =
+        position === 'top-right'
+            ? 'translateY(-150px) translateX(75px)'
+            : 'translateY(70px) translateX(-75px)'
+
+    const delay = (ms: number) =>
+        new Promise((resolve) => setTimeout(resolve, ms))
 
     useEffect(() => {
+        let isMounted = true // Prevent state updates on unmounted component
+
         async function animateCursor() {
-            if (!buttonRef.current) return
+            if (!buttonRef.current || !isMounted) return
 
-            await new Promise((resolve) => setTimeout(resolve, 1000))
+            const button = buttonRef.current
+            button.style.transform = initialTransform
+            button.style.transition = 'none'
 
-            const buttonRect = buttonRef.current.getBoundingClientRect()
+            await delay(100)
+            if (!isMounted) return
+
+            const buttonRect = button.getBoundingClientRect()
             const x = buttonRect.x + buttonRect.width / 2
             const y = buttonRect.y + buttonRect.height / 2
             setCursorPosition({ x, y })
 
-            await new Promise((resolve) => setTimeout(resolve, 1000))
+            await delay(1000)
+            if (!isMounted) return
 
-            const newY = y + 150
-            setCursorPosition({ x, y: newY })
+            button.style.outline = '2px solid #2B9BEB'
+            button.style.transition = 'transform 700ms ease-in-out'
+            button.style.transform = 'translateY(0)'
 
-            // Synchronize both cursor and button movement
-            buttonRef.current.style.transition = 'transform 700ms ease-in-out'
-            buttonRef.current.style.transform = `translateY(150px)`
+            setCursorPosition({
+                x: position === 'top-right' ? x - 100 : x + 75,
+                y: position === 'bottom-left' ? y - 100 : y + 150,
+            })
 
-            await new Promise((resolve) => setTimeout(resolve, 1000))
+            await delay(1000)
+            if (!isMounted) return
 
-            setCursorPosition({ x: window.innerHeight - 100, y: -100 })
+            button.style.outline = 'transparent'
+            setOpacity(0) // Trigger fade-out effect
         }
 
         animateCursor()
-    }, [buttonRef])
+
+        return () => {
+            isMounted = false // Cleanup to prevent memory leaks
+        }
+    }, [buttonRef, position])
 
     return (
         <Image
@@ -43,7 +69,9 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef }) => {
                 position: 'absolute',
                 top: `${cursorPosition.y}px`,
                 left: `${cursorPosition.x}px`,
-                transition: 'top 700ms ease-in-out, left 700ms ease-in-out',
+                transition:
+                    'top 700ms ease-in-out, left 700ms ease-in-out, opacity 700ms ease-in-out',
+                opacity,
             }}
             src="/assets/cursor/designer-cursor.svg"
             alt="cursor"

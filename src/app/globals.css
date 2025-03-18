@@ -4,21 +4,15 @@ body {
 }
 
 @theme {
-    --animate-shine: shine 4s linear forwards;
+    --animate-shine: shine 4s linear infinite;
 }
 
 @keyframes shine {
     0% {
         background-position: -200% 0;
-        color: transparent;
-    }
-    80% {
-        background-position: 200% 0;
-        color: transparent;
     }
     100% {
         background-position: 200% 0;
-        color: black;
     }
 }
 .shine-text {
