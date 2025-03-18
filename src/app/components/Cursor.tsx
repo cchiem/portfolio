@@ -10,6 +10,7 @@ interface CursorProps {
 const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
     const [cursorPosition, setCursorPosition] = useState({ x: -120, y: -10 })
     const [opacity, setOpacity] = useState(1) // Control fade-out
+    const [scale, setScale] = useState(1) // State for scaling effect
 
     const initialTransform =
         position === 'top-right'
@@ -43,14 +44,15 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
             button.style.outline = '2px solid #2B9BEB'
             button.style.transition = 'transform 700ms ease-in-out'
             button.style.transform = 'translateY(0)'
-
             setCursorPosition({
                 x: position === 'top-right' ? x - 100 : x + 75,
                 y: position === 'bottom-left' ? y - 100 : y + 150,
             })
+            setScale(0.9)
 
             await delay(1000)
             if (!isMounted) return
+            setScale(1)
 
             button.style.outline = 'transparent'
             setOpacity(0) // Trigger fade-out effect
@@ -63,6 +65,12 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
         }
     }, [buttonRef, position])
 
+    // Function to handle click event
+    const handleClick = () => {
+        setScale(0.9) // Scale down to 90%
+        setTimeout(() => setScale(1), 200) // Reset scale after 200ms
+    }
+
     return (
         <Image
             style={{
@@ -70,14 +78,16 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
                 top: `${cursorPosition.y}px`,
                 left: `${cursorPosition.x}px`,
                 transition:
-                    'top 700ms ease-in-out, left 700ms ease-in-out, opacity 700ms ease-in-out',
+                    'top 700ms ease-in-out, left 700ms ease-in-out, opacity 700ms ease-in-out, transform 200ms ease-in-out',
                 opacity,
+                transform: `scale(${scale})`,
             }}
             src="/assets/cursor/designer-cursor.svg"
             alt="cursor"
             width={100}
             height={100}
             className="pointer-events-none absolute z-50 size-30"
+            onClick={handleClick} // Add click event
         />
     )
 }
