@@ -2,153 +2,65 @@ import Image from 'next/image'
 import React from 'react'
 import Skill from './components/Skill'
 import Header from './components/Header'
+import Profile from './components/Profile'
+import Bio from './components/Bio'
+import Tardis from './components/Tardis'
 
-const Home = () => {
-    // const gridWidth = 50
-    // const gridColor = 'blue-200'
-    return (
-        <div className="relative flex min-h-screen min-w-full flex-col items-center justify-center bg-[url('/assets/background/subtle-dots.png')] bg-[size:60px] bg-top bg-repeat">
-            {/* <svg
-                className={`absolute inset-0 -z-1 size-full stroke-${gridColor}`}
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <defs>
-                    <pattern
-                        id="grid"
-                        width={gridWidth}
-                        height={gridWidth}
-                        patternUnits="userSpaceOnUse"
-                    >
-                        <path
-                            d={`M ${gridWidth} 0 L ${gridWidth} ${gridWidth}`}
-                            strokeWidth="1"
-                        />
-                        <path
-                            d={`M 0 ${gridWidth} L ${gridWidth} ${gridWidth}`}
-                            strokeWidth="1"
-                        />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg> */}
+const Home = () => (
+    <div className="relative flex min-h-screen min-w-full items-center justify-center bg-[url('/assets/background/subtle-dots.png')] bg-[size:60px] bg-top bg-repeat">
+        <Tardis />
 
-            {/* BG COLORS */}
-            {/* Purple Blur */}
-            {/* <div className="absolute top-1/4 left-1/4 -z-10 size-90 rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
+        <Header />
+        <div className="mt-30 flex max-w-2xl flex-col gap-4">
+            {/* PROFILE SECTION */}
+            <Profile />
+            {/* ABOUT ME */}
+            <Bio />
 
-            {/* Pink Blur */}
-            {/* <div className="absolute top-1/3 right-1/4 -z-10 size-90 rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
+            <div>
+                <h1 className="text-lg">Work Experience</h1>
+            </div>
 
-            {/* Yellow Blur */}
-            {/* <div className="absolute bottom-1/4 left-1/2 -z-10 size-90 rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-2xl filter"></div> */}
-
-            <Header />
-            <Image
-                src="/assets/gif/tardis.gif"
-                alt="Tardis"
-                width={100}
-                height={100}
-                className="absolute top-20 left-20"
-                unoptimized={true}
-            />
-            <div className="mt-30 flex max-w-2xl flex-col gap-4">
-                <div className="flex flex-row items-center justify-between">
-                    <div className="flex flex-col">
-                        <h1 className="text-4xl font-bold text-[#04061D]">
-                            Hi, I&apos;m{' '}
-                            <span className="shine-text">Chris</span> 👋
-                        </h1>
-                        <h2>Software Developer & Student @ UoA</h2>
-                        <p className="">📍 Auckland, New Zealand</p>
-                    </div>
-                    <div className="relative">
-                        <Image
-                            src="/assets/images/Profile.jpeg"
-                            alt="Profile Picture"
-                            width={200}
-                            height={200}
-                            className="rounded-full border-2 border-gray-300"
-                        />
-                        <div className="absolute right-5 bottom-5">
-                            <div className="relative flex items-center justify-center">
-                                {/* Ping effect */}
-                                <div className="absolute size-6 animate-[ping_2s_linear_infinite] rounded-full bg-green-400 opacity-75"></div>
-                                {/* Solid center */}
-                                <div className="relative size-6 rounded-full border-2 border-green-200 bg-green-400"></div>
-                            </div>
+            <div className="flex flex-col gap-2">
+                <h1 className="font-500 text-lg">Education</h1>
+                <div className="flex gap-3">
+                    <Image
+                        src="/assets/icons/UOA-icon.png"
+                        alt="University of Auckland"
+                        width={50}
+                        height={50}
+                        className="rounded-full border-2 border-gray-300"
+                    />
+                    <div className="flex w-full justify-between">
+                        <div>
+                            <h1>University of Auckland</h1>
+                            <p className="text-sm text-gray-500">
+                                Bachelor&apos;s of Computer Science &
+                                Information Technology Management
+                            </p>
                         </div>
+                        <p className="text-gray-500">Jan 2023 - Current</p>
                     </div>
-                </div>
-                {/* ABOUT ME */}
-                <div className="flex flex-col">
-                    <h2 className="text-lg font-bold">About Me</h2>
-                    <p className="text-gray-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolores repudiandae
-                        <span className="underline">
-                            earum tenetur omnis modi
-                        </span>
-                        , atque exercitationem quisquam,
-                        <span className="underline">
-                            earum tenetur omnis modi
-                        </span>
-                        obcaecati similique, delectus molestias at quos sunt
-                        quam sint rerum.
-                        <span className="underline">
-                            earum tenetur omnis modi
-                        </span>
-                        , voluptatum nostrum quos nulla at rem harum!
-                    </p>
-                </div>
-
-                <div>
-                    <h1 className="text-lg">Work Experience</h1>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <h1 className="font-500 text-lg">Education</h1>
-                    <div className="flex gap-3">
-                        <Image
-                            src="/assets/icons/UOA-icon.png"
-                            alt="University of Auckland"
-                            width={50}
-                            height={50}
-                            className="rounded-full border-2 border-gray-300"
-                        />
-                        <div className="flex w-full justify-between">
-                            <div>
-                                <h1>University of Auckland</h1>
-                                <p className="text-sm text-gray-500">
-                                    Bachelor&apos;s of Computer Science &
-                                    Information Technology Management
-                                </p>
-                            </div>
-                            <p className="text-gray-500">Jan 2023 - Current</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Skills */}
-                <div>
-                    <h1 className="text-lg">Skills</h1>
-                    <div className="flex gap-4">
-                        <Skill
-                            name="NextJS"
-                            source="/assets/icons/nextjs.svg"
-                        />
-                        <Skill
-                            name="TailwindCSS"
-                            source="/assets/icons/tailwind.svg"
-                        />
-                    </div>
-                </div>
-
-                <div>
-                    <h1>My Projects</h1>
                 </div>
             </div>
+
+            {/* Skills */}
+            <div>
+                <h1 className="text-lg">Skills</h1>
+                <div className="flex gap-4">
+                    <Skill name="NextJS" source="/assets/icons/nextjs.svg" />
+                    <Skill
+                        name="TailwindCSS"
+                        source="/assets/icons/tailwind.svg"
+                    />
+                </div>
+            </div>
+
+            <div>
+                <h1>My Projects</h1>
+            </div>
         </div>
-    )
-}
+    </div>
+)
 
 export default Home
