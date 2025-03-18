@@ -17,17 +17,27 @@ const Home = () => {
             {/* Fix: Ensure buttonRef is assigned correctly */}
             <Tardis />
             <Header />
-            <Cursor buttonRef={buttonRefProfilePic} position="top-right" />
-            <Cursor buttonRef={buttonRefBio} position="bottom-left" />
+            <Cursor
+                buttonRef={buttonRefProfilePic}
+                position="top-right"
+                imageUrl="assets/cursor/designer-cursor.svg"
+            />
+            <Cursor
+                buttonRef={buttonRefBio}
+                position="bottom-left"
+                imageUrl="assets/cursor/designer-cursor2.svg"
+            />
 
             <div className="mt-30 flex max-w-2xl flex-col gap-4">
                 {/* PROFILE SECTION */}
-                <Profile
-                    refProfilePic={buttonRefProfilePic}
-                    refBio={buttonRefBio}
-                />
-                {/* ABOUT ME */}
-                <Bio />
+                <section id="Home">
+                    <Profile
+                        refProfilePic={buttonRefProfilePic}
+                        refBio={buttonRefBio}
+                    />
+                    {/* ABOUT ME */}
+                    <Bio />
+                </section>
 
                 <div>
                     <h1 className="text-lg">Work Experience</h1>
@@ -68,12 +78,20 @@ const Home = () => {
                     <h1 className="text-lg">Skills</h1>
                     <div className="flex gap-4">
                         <Skill
-                            name="NextJS"
+                            name="Next.js"
                             source="/assets/icons/nextjs.svg"
+                        />
+                        <Skill
+                            name="React.js"
+                            source="/assets/icons/React-Dark.svg"
                         />
                         <Skill
                             name="TailwindCSS"
                             source="/assets/icons/tailwind.svg"
+                        />
+                        <Skill
+                            name="TypeScript"
+                            source="/assets/icons/TypeScript.svg"
                         />
                     </div>
                 </div>

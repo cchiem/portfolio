@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import HoverComponent from './HoverComponent'
 
 interface ProfileProps {
     refProfilePic: React.RefObject<HTMLDivElement>
@@ -14,7 +15,10 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
                 Hi, I&apos;m <span className="shine-text">Chris</span> 👋
             </h1>
             <h2>Software Developer & Student @ UoA</h2>
-            <p>📍 Auckland, New Zealand</p>
+            <HoverComponent
+                name="📍 Auckland, New Zealand"
+                source="/assets/icons/nzflag.svg"
+            />
         </div>
 
         {/* PROFILE PICTURE SECTION */}

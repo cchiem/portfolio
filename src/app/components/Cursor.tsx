@@ -5,17 +5,17 @@ import React, { useEffect, useState, RefObject } from 'react'
 interface CursorProps {
     buttonRef: RefObject<HTMLDivElement>
     position: 'top-right' | 'bottom-left'
+    imageUrl: string
 }
 
-const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
+const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
     const [cursorPosition, setCursorPosition] = useState({ x: -120, y: -10 })
     const [opacity, setOpacity] = useState(1) // Control fade-out
     const [scale, setScale] = useState(1) // State for scaling effect
-
     const initialTransform =
         position === 'top-right'
             ? 'translateY(-150px) translateX(75px)'
-            : 'translateY(70px) translateX(-75px)'
+            : 'translateY(50px) translateX(-75px)'
 
     const delay = (ms: number) =>
         new Promise((resolve) => setTimeout(resolve, ms))
@@ -76,7 +76,7 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
                 opacity,
                 transform: `scale(${scale})`,
             }}
-            src="/assets/cursor/designer-cursor.svg"
+            src={imageUrl}
             alt="cursor"
             width={100}
             height={100}
