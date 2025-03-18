@@ -29,8 +29,8 @@ const Bio = () => {
                     name="TypeScript"
                     source="/assets/icons/TypeScript.svg"
                 />
-                . I have a keen eye for detail and a passion for building
-                intuitive, high-performance web applications.
+                . I have a keen eye for detail and a passion for building web
+                applications.
             </p>
         </div>
     )

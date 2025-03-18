@@ -14,7 +14,7 @@ const HoverComponent = ({ name, source }: HoverComponentProps) => {
                 alt={name}
                 width={100}
                 height={100}
-                className="absolute bottom-0 left-1/2 h-auto w-10 -translate-x-1/2 rotate-6 transform opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-y-6 group-hover:scale-90 group-hover:opacity-100"
+                className="absolute bottom-0 left-1/2 h-auto w-10 -translate-x-1/2 rotate-6 transform rounded-sm opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-y-6 group-hover:scale-90 group-hover:opacity-100"
             />
         </span>
     )

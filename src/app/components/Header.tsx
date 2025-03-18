@@ -31,7 +31,7 @@ const Header = () => {
                     source="/assets/icons/Download.svg"
                     tooltip="Get my Resume!"
                     tooltipBg="bg-green-400"
-                    link=""
+                    link="https://docs.google.com/document/d/1rZshD9CkqeFYrFGOO2-1tUQBQlo74n1GXdNnWGJd3z0/export?format=pdf"
                 />
             </nav>
         </header>

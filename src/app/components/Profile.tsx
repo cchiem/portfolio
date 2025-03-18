@@ -12,7 +12,7 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
         {/* BIO SECTION */}
         <div className="flex flex-col" ref={refBio}>
             <h1 className="text-6xl font-bold text-[#04061D]">
-                Hi, I&apos;m <span className="shine-text">Chris</span> 👋
+                Hi, I&apos;m <span className="shine-text">Chris</span>
             </h1>
             <h2>Software Developer & Student @ UoA</h2>
             <HoverComponent

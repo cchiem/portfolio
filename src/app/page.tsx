@@ -28,7 +28,7 @@ const Home = () => {
                 imageUrl="assets/cursor/designer-cursor2.svg"
             />
 
-            <div className="mt-30 flex max-w-2xl flex-col gap-4">
+            <div className="mt-10 flex max-w-2xl flex-col gap-4">
                 {/* PROFILE SECTION */}
                 <section id="Home">
                     <Profile
