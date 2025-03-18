@@ -65,12 +65,6 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
         }
     }, [buttonRef, position])
 
-    // Function to handle click event
-    const handleClick = () => {
-        setScale(0.9) // Scale down to 90%
-        setTimeout(() => setScale(1), 200) // Reset scale after 200ms
-    }
-
     return (
         <Image
             style={{
@@ -87,7 +81,6 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position }) => {
             width={100}
             height={100}
             className="pointer-events-none absolute z-50 size-30"
-            onClick={handleClick} // Add click event
         />
     )
 }
