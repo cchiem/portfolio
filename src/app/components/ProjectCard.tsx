@@ -37,7 +37,7 @@ const ProjectCard = ({
                     <div className="mt-2 flex w-full flex-wrap gap-1">
                         {techList.map((tech, index) => (
                             <div
-                                className="r rounded-xl bg-gray-100 px-3 py-1 text-sm text-black"
+                                className="rounded-xl bg-blue-100 px-3 py-1 text-sm text-blue-600"
                                 key={index}
                             >
                                 {tech}
