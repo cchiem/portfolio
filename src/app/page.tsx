@@ -28,14 +28,13 @@ const Home = () => {
                 imageUrl="/assets/cursor/designer-cursor2.svg"
             />
 
-            <div className="absolute top-40 flex max-w-2xl flex-col gap-4">
+            <div className="absolute top-40 flex max-w-2xl flex-col gap-8">
                 {/* PROFILE SECTION */}
                 <section id="Home">
                     <Profile
                         refProfilePic={buttonRefProfilePic}
                         refBio={buttonRefBio}
                     />
-                    {/* ABOUT ME */}
                     <Bio />
                 </section>
 

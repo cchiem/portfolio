@@ -25,11 +25,9 @@ const Skills = () => {
                 <Skill name="Java" source="/assets/icons/JavaIcon.svg" />
                 <Skill name="Clerk" source="/assets/icons/clerk.svg" />
                 <Skill name="AWS" source="/assets/icons/aws.svg" />
-                <Skill name="Express.js" source="/assets/icons/express.svg" />
                 <Skill name="MySQL" source="/assets/icons/mysql.svg" />
                 <Skill name="MongoDB" source="/assets/icons/mongodb.svg" />
                 <Skill name="Vercel" source="/assets/icons/vercel.svg" />
-                <Skill name="Vite" source="/assets/icons/vite.svg" />
             </div>
         </div>
     )

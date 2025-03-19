@@ -10,6 +10,7 @@ const Education = () => {
                 subheading="Bachelor's of Computer Science & Information Technology Management"
                 imageSource="/assets/work/UOA.png"
                 date="Jan 2023 - Current"
+                link="https://www.auckland.ac.nz/en.html"
             />
         </div>
     )
