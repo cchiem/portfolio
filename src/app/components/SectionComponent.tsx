@@ -18,7 +18,7 @@ const SectionComponent = ({
     link,
 }: SectionProps) => {
     return (
-        <div className="group relative flex items-center gap-3">
+        <div className="flex items-center gap-3">
             <Image
                 src={imageSource}
                 alt="University of Auckland"

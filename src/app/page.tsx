@@ -15,7 +15,7 @@ const Home = () => {
     const buttonRefBio = useRef<HTMLDivElement | null>(null)
 
     return (
-        <div className="relative flex h-dvh w-dvw items-center justify-center">
+        <div className="relative flex min-h-full min-w-full items-center justify-center">
             <div className="fixed top-0 left-0 z-10 h-16 w-full bg-gradient-to-b from-white to-transparent"></div>
 
             <Tardis />
@@ -33,7 +33,6 @@ const Home = () => {
             />
 
             <div className="absolute top-40 flex max-w-2xl flex-col gap-8 pb-40">
-                {/* PROFILE SECTION */}
                 <section id="Home">
                     <Profile
                         refProfilePic={buttonRefProfilePic}
@@ -42,22 +41,18 @@ const Home = () => {
                     <Bio />
                 </section>
 
-                {/* WORK EXPERIENCE */}
                 <section id="Experience">
                     <Experience />
                 </section>
 
-                {/* EDUCATION */}
                 <section id="Education">
                     <Education />
                 </section>
 
-                {/* Skills */}
                 <section id="Skills">
                     <Skills />
                 </section>
 
-                {/* Projects */}
                 <section id="Projects">
                     <Projects />
                 </section>
