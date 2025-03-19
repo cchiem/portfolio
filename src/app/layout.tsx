@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${gabarito.className} cursor-[url('/assets/cursor/arrowhead.svg'), auto] antialiased`}
+                className={`${gabarito.className} cursor-[url('/assets/cursor/arrowhead.svg'), auto] bg-[url('/assets/background/subtle-dots.png')] bg-[size:60px] bg-top bg-repeat antialiased`}
             >
                 {children}
             </body>
