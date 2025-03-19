@@ -7,7 +7,7 @@ interface HoverComponentProps {
 }
 const HoverComponent = ({ name, source }: HoverComponentProps) => {
     return (
-        <span className="group relative mx-1 inline-block font-bold">
+        <span className="group shine-text-shiny relative mx-1 inline-block font-bold">
             {name}
             <Image
                 src={source}

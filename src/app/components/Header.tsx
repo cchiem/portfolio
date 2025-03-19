@@ -22,13 +22,13 @@ const Header = () => {
                     link="https://www.linkedin.com/in/chris-chiem-uoa/"
                 />
                 <HeaderIcon
-                    source="/assets/icons/Github-Dark.svg"
+                    source="/assets/icons/github.svg"
                     tooltip="Check out my Github!"
                     tooltipBg="bg-black"
                     link="https://github.com/cchiem"
                 />
                 <HeaderIcon
-                    source="/assets/icons/Download.svg"
+                    source="/assets/icons/downloadfolder.svg"
                     tooltip="Get my Resume!"
                     tooltipBg="bg-green-400"
                     link="https://docs.google.com/document/d/1rZshD9CkqeFYrFGOO2-1tUQBQlo74n1GXdNnWGJd3z0/export?format=pdf"

@@ -5,14 +5,14 @@ const Bio = () => {
     return (
         <div className="flex flex-col">
             <h2 className="text-lg font-bold">About Me</h2>
-            <p className="relative text-gray-600">
+            <div className="relative text-gray-600">
                 I&apos;m a Computer Science student at the{' '}
                 <span className="font-bold">University of Auckland</span>,
                 specializing in full-stack development with
                 {/* React Hover */}
                 <HoverComponent
                     name="React.js"
-                    source="/assets/icons/React-Dark.svg"
+                    source="/assets/icons/react.svg"
                 />
                 ,{/* Next.js Hover */}
                 <HoverComponent
@@ -31,7 +31,7 @@ const Bio = () => {
                 />
                 . I have a keen eye for detail and a passion for building web
                 applications.
-            </p>
+            </div>
         </div>
     )
 }

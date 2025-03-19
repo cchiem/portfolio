@@ -15,7 +15,7 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
     const initialTransform =
         position === 'top-right'
             ? 'translateY(-150px) translateX(75px)'
-            : 'translateY(50px) translateX(-75px)'
+            : 'translateY(25px) translateX(-105px)'
 
     const delay = (ms: number) =>
         new Promise((resolve) => setTimeout(resolve, ms))
@@ -41,14 +41,17 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
             await delay(1000)
             if (!isMounted) return
 
+            setScale(0.9)
+            await delay(500)
+
             button.style.outline = '2px solid #2B9BEB'
             button.style.transition = 'transform 700ms ease-in-out'
             button.style.transform = 'translateY(0)'
+
             setCursorPosition({
-                x: position === 'top-right' ? x - 100 : x + 75,
-                y: position === 'bottom-left' ? y - 100 : y + 150,
+                x: position === 'top-right' ? x - 75 : x + 105,
+                y: position === 'bottom-left' ? y - 25 : y + 150,
             })
-            setScale(0.9)
 
             await delay(1000)
             if (!isMounted) return

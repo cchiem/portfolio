@@ -5,6 +5,7 @@ body {
 
 @theme {
     --animate-shine: shine 4s linear infinite;
+    --animate-shine-once: shine 4s linear;
 }
 
 @keyframes shine {
@@ -15,11 +16,33 @@ body {
         background-position: 200% 0;
     }
 }
-.shine-text {
+
+.shine-text-blue {
     /* background-image: linear-gradient(to right, #ec4899, #8b5cf6, #ec4899); */
     background-image: linear-gradient(to right, #3b82f6, #06b6d4, #3b82f6);
     background-size: 200% auto;
     background-clip: text;
     color: transparent;
     animation: var(--animate-shine);
+}
+
+@keyframes shiny {
+    0% {
+        background-position: -200% 0;
+    }
+    80% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+        color: #4a5565;
+    }
+}
+
+.shine-text-shiny {
+    background-image: linear-gradient(to right, #ec4899, #8b5cf6, #ec4899);
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    animation: shiny 10s linear forwards;
 }
