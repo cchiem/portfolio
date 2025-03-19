@@ -50,13 +50,13 @@ const ProjectCard = ({
                         iconSource="/assets/icons/globe.svg"
                         text="Live"
                         link={website}
-                        color="bg-black"
+                        color="bg-[#242938]"
                     />
                     <Button
                         iconSource="/assets/icons/github.svg"
                         text="Source"
                         link={github}
-                        color="bg-black"
+                        color="bg-[#242938]"
                     />
                 </div>
             </div>

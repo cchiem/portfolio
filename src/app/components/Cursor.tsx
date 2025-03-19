@@ -1,4 +1,5 @@
-'use client'
+'use client' // Ensure this runs only on the client
+
 import Image from 'next/image'
 import React, { useEffect, useState, RefObject } from 'react'
 
@@ -12,6 +13,8 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
     const [cursorPosition, setCursorPosition] = useState({ x: -120, y: -10 })
     const [opacity, setOpacity] = useState(1) // Control fade-out
     const [scale, setScale] = useState(1) // State for scaling effect
+    const [isClient, setIsClient] = useState(false) // Ensure hydration matches
+
     const initialTransform =
         position === 'top-right'
             ? 'translateY(-150px) translateX(75px)'
@@ -21,6 +24,12 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
         new Promise((resolve) => setTimeout(resolve, ms))
 
     useEffect(() => {
+        setIsClient(true) // Prevents hydration mismatch by ensuring it runs only on the client
+    }, [])
+
+    useEffect(() => {
+        if (!isClient || !buttonRef.current) return // Ensure it's running on the client
+
         let isMounted = true // Prevent state updates on unmounted component
 
         async function animateCursor() {
@@ -31,7 +40,7 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
             button.style.transition = 'none'
 
             await delay(100)
-            if (!isMounted) return
+            if (!isMounted || !buttonRef.current) return
 
             const buttonRect = button.getBoundingClientRect()
             const x = buttonRect.x + buttonRect.width / 2
@@ -66,7 +75,10 @@ const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
         return () => {
             isMounted = false // Cleanup to prevent memory leaks
         }
-    }, [buttonRef, position])
+    }, [isClient, buttonRef, position])
+
+    // Prevent rendering on the server until hydration is complete
+    if (!isClient) return null
 
     return (
         <Image

@@ -24,9 +24,16 @@ const Header = () => {
                 <HeaderIcon
                     source="/assets/icons/github.svg"
                     tooltip="Check out my Github!"
-                    tooltipBg="bg-black"
+                    tooltipBg="bg-[#242938]"
                     link="https://github.com/cchiem"
                 />
+                <HeaderIcon
+                    source="/assets/icons/email.svg"
+                    tooltip="Contact me on Gmail!"
+                    tooltipBg="bg-red-400"
+                    link="mailto:chris.chiem01@gmail.com"
+                />
+
                 <HeaderIcon
                     source="/assets/icons/downloadfolder.svg"
                     tooltip="Get my Resume!"

@@ -29,7 +29,7 @@ const Projects = () => {
                     website="https://img-984444524408.australia-southeast1.run.app/"
                     github="https://github.com/cchiem/podcast-library-flask"
                     imgSource="/assets/projects/podcastlib.png"
-                    techList={['HTML', 'CSS', 'JavaScript', 'Flask']}
+                    techList={['HTML', 'CSS', 'JavaScript', 'Flask', 'SQLite']}
                 />
             </div>
         </div>
