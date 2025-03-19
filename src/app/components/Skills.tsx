@@ -15,7 +15,7 @@ const Skills = () => {
                 />
                 <Skill
                     name="JavaScript"
-                    source="/assets/icons/javascript.svg"
+                    source="/assets/icons/JavaScript.svg"
                 />
             </div>
         </div>
