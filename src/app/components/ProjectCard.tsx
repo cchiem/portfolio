@@ -29,12 +29,12 @@ const ProjectCard = ({
                 height={1000}
                 className="h-auto w-full shadow-sm"
             />
-            <div className="flex h-full flex-col justify-between gap-2 p-4">
-                <div>
+            <div className="flex h-full flex-col justify-between gap-4 p-4">
+                <div className="flex flex-col">
                     <h1 className="text-lg font-bold">{title}</h1>
                     <h2 className="text-gray-400">{date}</h2>
                     <p className="text-md leading-6 text-gray-500">{text}</p>
-                    <div className="flex w-full flex-wrap gap-1">
+                    <div className="mt-2 flex w-full flex-wrap gap-1">
                         {techList.map((tech, index) => (
                             <div
                                 className="r rounded-xl bg-gray-100 px-3 py-1 text-sm text-black"
