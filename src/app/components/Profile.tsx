@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import HoverComponent from './HoverComponent'
+import Ping from './Ping'
 
 interface ProfileProps {
     refProfilePic: React.RefObject<HTMLDivElement>
@@ -26,17 +27,12 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
             <Image
                 src="/assets/images/Profile.jpeg"
                 alt="Profile Picture"
-                width={200}
-                height={200}
+                width={1000}
+                height={1000}
                 priority
                 className="size-45 rounded-full border-2 border-gray-300"
             />
-            <div className="absolute right-3 bottom-3 flex items-center justify-center">
-                {/* Ping effect */}
-                <div className="absolute size-6 animate-ping rounded-full bg-green-400 opacity-75"></div>
-                {/* Solid center */}
-                <div className="relative size-6 rounded-full border-2 border-green-200 bg-green-400"></div>
-            </div>
+            <Ping />
         </div>
     </div>
 )

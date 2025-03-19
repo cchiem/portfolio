@@ -10,7 +10,6 @@ const Bio = () => {
                 <span className="font-bold">University of Auckland</span>,
                 specializing in full-stack development with
                 {/* React Hover */}
-                {/* helo world */}
                 <HoverComponent
                     name="React.js"
                     source="/assets/icons/react.svg"
@@ -26,6 +25,7 @@ const Bio = () => {
                     source="/assets/icons/tailwind.svg"
                 />
                 and
+                {/* Typescript Hover */}
                 <HoverComponent
                     name="TypeScript"
                     source="/assets/icons/TypeScript.svg"

@@ -4,7 +4,7 @@ import HeaderIcon from './HeaderIcon'
 
 const Header = () => {
     return (
-        <header className="fixed top-10 z-1000 flex items-center rounded-2xl bg-white p-2 shadow-md">
+        <header className="fixed top-10 z-1000 flex items-center rounded-2xl bg-white px-6 py-2 shadow-md">
             <nav className="flex items-center gap-8">
                 <a href="#Home">
                     <Image
