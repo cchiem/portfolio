@@ -18,7 +18,6 @@ const Skills = () => {
                     source="/assets/icons/JavaScript.svg"
                 />
                 <Skill name="Java" source="/assets/icons/Java.svg" />
-
                 <Skill name="Python" source="/assets/icons/python.svg" />
                 <Skill name="Node.js" source="/assets/icons/nodejs.svg" />
                 <Skill name="Flask" source="/assets/icons/flask.svg" />
