@@ -29,9 +29,9 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
                 width={200}
                 height={200}
                 priority
-                className="rounded-full border-2 border-gray-300"
+                className="size-45 rounded-full border-2 border-gray-300"
             />
-            <div className="absolute right-5 bottom-5 flex items-center justify-center">
+            <div className="absolute right-3 bottom-3 flex items-center justify-center">
                 {/* Ping effect */}
                 <div className="absolute size-6 animate-ping rounded-full bg-green-400 opacity-75"></div>
                 {/* Solid center */}

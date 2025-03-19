@@ -15,7 +15,10 @@ const Home = () => {
 
     return (
         <div className="relative flex h-dvh w-dvw items-center justify-center">
+            <div className="fixed top-0 left-0 z-10 h-16 w-full bg-gradient-to-b from-white to-transparent"></div>
+
             <Tardis />
+
             <Header />
             <Cursor
                 buttonRef={buttonRefProfilePic}
@@ -58,6 +61,7 @@ const Home = () => {
                     <h1>My Projects</h1>
                 </section>
             </div>
+            <div className="fixed bottom-0 left-0 z-10 h-16 w-full bg-gradient-to-t from-white to-transparent"></div>
         </div>
     )
 }
