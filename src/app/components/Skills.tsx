@@ -17,6 +17,8 @@ const Skills = () => {
                     name="JavaScript"
                     source="/assets/icons/JavaScript.svg"
                 />
+                <Skill name="HTML" source="/assets/icons/HTML.svg" />
+                <Skill name="CSS" source="/assets/icons/CSS.svg" />
                 <Skill name="Python" source="/assets/icons/python.svg" />
                 <Skill name="Node.js" source="/assets/icons/nodejs.svg" />
                 <Skill name="Flask" source="/assets/icons/flask.svg" />
@@ -24,8 +26,6 @@ const Skills = () => {
                 <Skill name="Clerk" source="/assets/icons/clerk.svg" />
                 <Skill name="AWS" source="/assets/icons/aws.svg" />
                 <Skill name="Express.js" source="/assets/icons/express.svg" />
-                <Skill name="HTML" source="/assets/icons/HTML.svg" />
-                <Skill name="CSS" source="/assets/icons/CSS.svg" />
                 <Skill name="MySQL" source="/assets/icons/mysql.svg" />
                 <Skill name="MongoDB" source="/assets/icons/mongodb.svg" />
                 <Skill name="Vercel" source="/assets/icons/vercel.svg" />
