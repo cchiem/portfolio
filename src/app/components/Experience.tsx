@@ -1,11 +1,17 @@
 import React from 'react'
 import SectionComponent from './SectionComponent'
 
-const WorkExperience = () => {
+const Experience = () => {
     return (
         <div className="flex flex-col gap-3">
-            <h1 className="font-500 text-lg">Work Experience</h1>
+            <h1 className="text-lg font-bold">Experience</h1>
             <div className="flex flex-col gap-3">
+                <SectionComponent
+                    title="Unversity of Auckland Computer Science Society"
+                    subheading="Vice President | Co-Founder"
+                    imageSource="/assets/work/UOACS.png"
+                    date="Jan 2024 - Current"
+                />
                 <SectionComponent
                     title="Web Development Consulting Club"
                     subheading="Technical Lead"
@@ -29,4 +35,4 @@ const WorkExperience = () => {
     )
 }
 
-export default WorkExperience
+export default Experience

@@ -4,7 +4,7 @@ import SectionComponent from './SectionComponent'
 const Education = () => {
     return (
         <div className="flex flex-col gap-2">
-            <h1 className="font-500 text-lg">Education</h1>
+            <h1 className="text-lg font-bold">Education</h1>
             <SectionComponent
                 title="University of Auckland"
                 subheading="Bachelor's of Computer Science & Information Technology Management"

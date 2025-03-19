@@ -7,7 +7,7 @@ import Tardis from './components/Tardis'
 import Cursor from './components/Cursor'
 import Skills from './components/Skills'
 import Education from './components/Education'
-import WorkExperience from './components/WorkExperience'
+import Experience from './components/Experience'
 
 const Home = () => {
     const buttonRefProfilePic = useRef<HTMLDivElement | null>(null)
@@ -40,8 +40,8 @@ const Home = () => {
                 </section>
 
                 {/* WORK EXPERIENCE */}
-                <section id="WorkExperience">
-                    <WorkExperience />
+                <section id="Experience">
+                    <Experience />
                 </section>
 
                 {/* EDUCATION */}

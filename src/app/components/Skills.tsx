@@ -4,7 +4,7 @@ import Skill from './Skill'
 const Skills = () => {
     return (
         <div className="flex flex-col gap-4">
-            <h1 className="text-lg">Skills</h1>
+            <h1 className="text-lg font-bold">Skills</h1>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(40px,1fr))] place-items-baseline gap-x-10 gap-y-6">
                 <Skill name="Next.js" source="/assets/icons/nextjs.svg" />
                 <Skill name="React.js" source="/assets/icons/react.svg" />
@@ -21,6 +21,15 @@ const Skills = () => {
                 <Skill name="Node.js" source="/assets/icons/nodejs.svg" />
                 <Skill name="Flask" source="/assets/icons/flask.svg" />
                 <Skill name="Java" source="/assets/icons/JavaIcon.svg" />
+                <Skill name="Clerk" source="/assets/icons/clerk.svg" />
+                <Skill name="AWS" source="/assets/icons/aws.svg" />
+                <Skill name="Express.js" source="/assets/icons/express.svg" />
+                <Skill name="HTML" source="/assets/icons/HTML.svg" />
+                <Skill name="CSS" source="/assets/icons/CSS.svg" />
+                <Skill name="MySQL" source="/assets/icons/mysql.svg" />
+                <Skill name="MongoDB" source="/assets/icons/mongodb.svg" />
+                <Skill name="Vercel" source="/assets/icons/vercel.svg" />
+                <Skill name="Vite" source="/assets/icons/vite.svg" />
             </div>
         </div>
     )
