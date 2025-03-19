@@ -5,7 +5,7 @@ const Skills = () => {
     return (
         <div className="flex flex-col gap-4">
             <h1 className="text-lg">Skills</h1>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(50px,1fr))] place-items-baseline gap-x-10 gap-y-6">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(40px,1fr))] place-items-baseline gap-x-10 gap-y-6">
                 <Skill name="Next.js" source="/assets/icons/nextjs.svg" />
                 <Skill name="React.js" source="/assets/icons/react.svg" />
                 <Skill name="TailwindCSS" source="/assets/icons/tailwind.svg" />
