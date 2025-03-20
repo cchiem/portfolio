@@ -37,7 +37,7 @@ const SectionComponent = ({
                     </Link>
                     <p className="text-sm text-gray-500">{subheading}</p>
                 </div>
-                <p className="text-gray-500">{date}</p>
+                <p className="text-sm text-gray-500">{date}</p>
             </div>
         </div>
     )

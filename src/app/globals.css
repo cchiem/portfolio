@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-body {
+html {
     cursor: url('/assets/cursor/arrowhead.svg'), auto;
 }
 

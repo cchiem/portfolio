@@ -11,7 +11,7 @@ const Skill = ({ name, source }: { name: string; source: string }) => {
                 height={50}
                 className="rounded-md"
             />
-            <p className="text-center text-sm text-gray-500">{name}</p>
+            <p className="text-center text-xs text-gray-500">{name}</p>
         </div>
     )
 }
