@@ -9,7 +9,7 @@ const Skill = ({ name, source }: { name: string; source: string }) => {
                 alt={name}
                 width={50}
                 height={50}
-                className="rounded-md"
+                className="rounded-md transition-all duration-100 ease-out hover:-translate-y-1.5"
             />
             <p className="text-center text-xs text-gray-500">{name}</p>
         </div>

@@ -15,10 +15,11 @@ const Home = () => {
     const buttonRefBio = useRef<HTMLDivElement | null>(null)
 
     return (
-        <div className="relative flex min-h-full min-w-full items-center justify-center">
+        <div
+            className="relative flex min-h-full min-w-full items-center justify-center"
+            id="Home"
+        >
             <div className="fixed top-0 left-0 z-10 h-16 w-full bg-gradient-to-b from-white to-transparent"></div>
-
-            <Tardis />
 
             <Header />
             <Cursor
@@ -33,7 +34,7 @@ const Home = () => {
             />
 
             <div className="absolute top-40 flex max-w-2xl flex-col gap-8 pb-40">
-                <section id="Home">
+                <section>
                     <Profile
                         refProfilePic={buttonRefProfilePic}
                         refBio={buttonRefBio}

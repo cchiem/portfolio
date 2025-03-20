@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import HoverComponent from './HoverComponent'
 import Ping from './Ping'
+import Tardis from './Tardis'
 
 interface ProfileProps {
     refProfilePic: React.RefObject<HTMLDivElement>
@@ -21,6 +22,7 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
                 source="/assets/icons/nzflag.svg"
             />
         </div>
+        <Tardis />
 
         {/* PROFILE PICTURE SECTION */}
         <div className="absolute right-0" ref={refProfilePic}>
