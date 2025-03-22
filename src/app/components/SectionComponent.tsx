@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 interface SectionProps {
     title: string
@@ -31,21 +32,26 @@ const SectionComponent = ({
             />
 
             {/* Accordion Section */}
-            <div
-                className="group flex w-full flex-col overflow-hidden hover:cursor-pointer"
+            <motion.div
+                className="group flex w-full cursor-pointer flex-col overflow-hidden"
                 onClick={() => setIsVisible(!isVisible)}
             >
                 {/* Title & Arrow */}
                 <div className="flex items-center justify-between select-none">
                     <div className="flex flex-row items-center gap-4">
                         <h1 className="text-md">{title}</h1>
-                        <Image
-                            src="/assets/icons/downarrow.svg"
-                            alt=""
-                            width={20}
-                            height={20}
-                            className={`size-4 transition-all duration-500 ease-in-out ${isVisible ? 'rotate-180 opacity-100' : 'rotate-0 opacity-0'} group-hover:opacity-100`}
-                        />
+                        <motion.div
+                            animate={{ rotate: isVisible ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <Image
+                                src="/assets/icons/downarrow.svg"
+                                alt=""
+                                width={20}
+                                height={20}
+                                className="size-4 opacity-100 transition-opacity duration-300"
+                            />
+                        </motion.div>
                     </div>
                     <p className="text-sm text-gray-500">{date}</p>
                 </div>
@@ -56,14 +62,18 @@ const SectionComponent = ({
                 </h2>
 
                 {/* Expandable Content */}
-                <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        isVisible ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                <motion.div
+                    initial={false}
+                    animate={{
+                        height: isVisible ? 'auto' : 0,
+                        opacity: isVisible ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
                 >
                     <p className="mt-0.5 text-gray-700">{description}</p>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     )
 }

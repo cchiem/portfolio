@@ -7,6 +7,16 @@ html {
 @theme {
     --animate-shine: shine 4s linear infinite;
     --animate-shine-purple: shine 30s linear infinite;
+
+    --color-base-primary: hsl(217, 35%, 45%);
+    --color-base-light: hsl(217, 20%, 51%);
+
+    --color-base-bold: hsl(217, 21%, 21%);
+}
+
+@layer base {
+    [data-theme='dark'] {
+    }
 }
 
 @keyframes shine {
@@ -18,26 +28,19 @@ html {
     }
 }
 
-.shine-text-blue {
-    background-image: linear-gradient(to right, #3b82f6, #06b6d4, #3b82f6);
+.shine-text-blue,
+.shine-text-shiny {
     background-size: 200% auto;
     background-clip: text;
     color: transparent;
     animation: var(--animate-shine);
 }
 
-@keyframes shine {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
+.shine-text-blue {
+    background-image: linear-gradient(to right, #3b82f6, #06b6d4, #3b82f6);
 }
+
 .shine-text-shiny {
     background-image: linear-gradient(to right, #ec4899, #8b5cf6, #ec4899);
-    background-size: 200% auto;
-    background-clip: text;
-    color: transparent;
     animation: var(--animate-shine-purple);
 }

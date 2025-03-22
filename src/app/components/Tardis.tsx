@@ -13,7 +13,7 @@ const Tardis = () => {
                 className="transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
             <div className="border-grey-50 absolute -bottom-10 left-15 w-fit rounded-xl rounded-tl-sm border-1 bg-blue-400 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                <p className="text-xm text-gray-200">Chris</p>
+                <p className="text-xm text-base-light">Chris</p>
                 <p className="text-md">I made this in minecraft!</p>
             </div>
             <div className="rounded-lg"></div>
