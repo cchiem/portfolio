@@ -9,7 +9,7 @@ interface CursorProps {
     imageUrl: string
 }
 
-const Cursor: React.FC<CursorProps> = ({ buttonRef, position, imageUrl }) => {
+const Cursor = ({ buttonRef, position, imageUrl }: CursorProps) => {
     const [cursorPosition, setCursorPosition] = useState({ x: -120, y: -10 })
     const [opacity, setOpacity] = useState(1) // Control fade-out
     const [scale, setScale] = useState(1) // State for scaling effect
