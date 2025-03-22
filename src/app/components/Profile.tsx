@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import HoverComponent from './HoverComponent'
 import Ping from './Ping'
-import Tardis from './Tardis'
 
 interface ProfileProps {
     refProfilePic: React.RefObject<HTMLDivElement>

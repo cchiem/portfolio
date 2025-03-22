@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Tardis from './components/Tardis'
 
 const Home = () => {
     const buttonRefProfilePic = useRef<HTMLDivElement | null>(null)
@@ -19,7 +20,7 @@ const Home = () => {
             id="Home"
         >
             <div className="fixed top-0 left-0 z-10 h-16 w-full bg-gradient-to-b from-white to-transparent"></div>
-
+            <Tardis />
             <Header />
             <Cursor
                 buttonRef={buttonRefProfilePic}
