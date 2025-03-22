@@ -22,7 +22,6 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
                 source="/assets/icons/nzflag.svg"
             />
         </div>
-        <Tardis />
 
         {/* PROFILE PICTURE SECTION */}
         <div className="absolute right-0" ref={refProfilePic}>
@@ -32,7 +31,7 @@ const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
                 width={1000}
                 height={1000}
                 priority
-                className="size-45 rounded-full border-2 border-gray-300"
+                className="size-40 rounded-full border-2 border-gray-300"
             />
             <Ping />
         </div>

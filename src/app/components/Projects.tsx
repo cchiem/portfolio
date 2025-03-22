@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 const Projects = () => {
     return (
         <div className="flex flex-col gap-4">
-            <h1 className="text-lg font-bold">My Projects</h1>
+            <h1 className="text-xl font-bold">My Projects</h1>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-8">
                 <ProjectCard
                     title="SnapMenu"

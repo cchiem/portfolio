@@ -4,7 +4,7 @@ import Skill from './Skill'
 const Skills = () => {
     return (
         <div className="flex flex-col gap-4">
-            <h1 className="text-lg font-bold">Skills</h1>
+            <h1 className="text-xl font-bold">Skills</h1>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(40px,1fr))] gap-x-10 gap-y-6">
                 <Skill name="Next.js" source="/assets/icons/nextjs.svg" />
                 <Skill name="React.js" source="/assets/icons/react.svg" />
