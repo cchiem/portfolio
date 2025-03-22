@@ -8,7 +8,7 @@ interface ProfileProps {
     refBio: React.RefObject<HTMLDivElement>
 }
 
-const Profile: React.FC<ProfileProps> = ({ refProfilePic, refBio }) => (
+const Profile = ({ refProfilePic, refBio }: ProfileProps) => (
     <div className="relative flex h-[200px] flex-row items-center justify-between">
         {/* BIO SECTION */}
         <div className="flex flex-col" ref={refBio}>

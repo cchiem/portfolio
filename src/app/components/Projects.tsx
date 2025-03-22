@@ -25,11 +25,18 @@ const Projects = () => {
                 <ProjectCard
                     title="Podcast Library"
                     date="2024"
-                    text="Designed and Developed an Podcast Library with CRUD operations and authentication"
+                    text="Designed and Developed an Podcast Library with CRUD operations and authentication."
                     website="https://img-984444524408.australia-southeast1.run.app/"
                     github="https://github.com/cchiem/podcast-library-flask"
                     imgSource="/assets/projects/podcastlib.png"
-                    techList={['HTML', 'CSS', 'JavaScript', 'Flask', 'SQLite']}
+                    techList={[
+                        'HTML',
+                        'CSS',
+                        'JavaScript',
+                        'Flask',
+                        'SQLite',
+                        'PostgreSQL',
+                    ]}
                 />
             </div>
         </div>

@@ -5,6 +5,7 @@ html {
 }
 
 @theme {
+    --black: [#242938];
     --animate-shine: shine 4s linear infinite;
     --animate-shine-purple: shine 30s linear infinite;
 

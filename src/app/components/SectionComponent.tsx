@@ -1,7 +1,9 @@
 'use client'
+
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import ReactMarkdown from 'react-markdown'
 
 interface SectionProps {
     title: string
@@ -9,6 +11,7 @@ interface SectionProps {
     imageSource: string
     date: string
     description: string
+    link?: string
 }
 
 const SectionComponent = ({
@@ -21,24 +24,29 @@ const SectionComponent = ({
     const [isVisible, setIsVisible] = useState(false)
 
     return (
-        <div className="flex gap-3">
-            {/* Profile Image */}
-            <Image
-                src={imageSource}
-                alt="University of Auckland"
-                width={50}
-                height={50}
-                className="size-12 rounded-full border-2 border-gray-300"
-            />
+        <div className="flex gap-4 rounded-lg p-2 transition-all duration-300 hover:bg-gray-100">
+            {/* Profile Image with Hover Animation */}
 
+            <div className="size-12">
+                <Image
+                    src={imageSource}
+                    alt="Profile"
+                    width={50}
+                    height={50}
+                    className="rounded-full border border-gray-300 shadow-md"
+                />
+            </div>
             {/* Accordion Section */}
-            <motion.div
-                className="group flex w-full cursor-pointer flex-col overflow-hidden"
-                onClick={() => setIsVisible(!isVisible)}
-            >
-                {/* Title & Arrow */}
-                <div className="flex items-center justify-between select-none">
-                    <div className="flex flex-row items-center gap-4">
+            <motion.div className="group flex w-full flex-col overflow-hidden">
+                {/* Title & Expand Arrow */}
+                <div
+                    className="flex cursor-pointer items-center justify-between select-none"
+                    onClick={() => setIsVisible(!isVisible)}
+                    tabIndex={0}
+                    role="button"
+                    aria-expanded={isVisible}
+                >
+                    <div className="flex items-center gap-4">
                         <h1 className="text-md">{title}</h1>
                         <motion.div
                             animate={{ rotate: isVisible ? 180 : 0 }}
@@ -46,10 +54,10 @@ const SectionComponent = ({
                         >
                             <Image
                                 src="/assets/icons/downarrow.svg"
-                                alt=""
+                                alt="Expand"
                                 width={20}
                                 height={20}
-                                className="size-4 opacity-100 transition-opacity duration-300"
+                                className="size-4 opacity-80 transition-opacity duration-300"
                             />
                         </motion.div>
                     </div>
@@ -57,7 +65,7 @@ const SectionComponent = ({
                 </div>
 
                 {/* Subheading */}
-                <h2 className="text-sm text-gray-500 select-none">
+                <h2 className="text-sm text-gray-600 select-none">
                     {subheading}
                 </h2>
 
@@ -69,9 +77,11 @@ const SectionComponent = ({
                         opacity: isVisible ? 1 : 0,
                     }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="overflow-hidden"
+                    className="flex flex-col gap-4 overflow-hidden"
                 >
-                    <p className="mt-0.5 text-gray-700">{description}</p>
+                    <div className="mt-2 text-sm text-gray-700">
+                        <ReactMarkdown>{description}</ReactMarkdown>
+                    </div>
                 </motion.div>
             </motion.div>
         </div>
