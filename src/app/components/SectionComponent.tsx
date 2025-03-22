@@ -24,7 +24,7 @@ const SectionComponent = ({
     const [isVisible, setIsVisible] = useState(false)
 
     return (
-        <div className="flex gap-4 rounded-lg p-2 transition-all duration-300 hover:bg-gray-100">
+        <div className="flex gap-4 rounded-lg transition-all duration-600">
             {/* Profile Image with Hover Animation */}
 
             <div className="size-12">

@@ -12,7 +12,7 @@ const Header = () => {
                         alt="Home"
                         width={20}
                         height={20}
-                        className="size-7"
+                        className="size-7 transition-transform duration-200 ease-in-out hover:scale-120 hover:cursor-pointer"
                     />
                 </a>
                 <HeaderIcon
